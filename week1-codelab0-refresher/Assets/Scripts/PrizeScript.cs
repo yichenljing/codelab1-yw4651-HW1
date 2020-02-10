@@ -18,6 +18,12 @@ public class PrizeScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        transform.position = new Vector2(Random.Range(-4,4),Random.Range(-4,4));
+        
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = Color.red; //change prize color to red when collision
+
+            transform.position = new Vector2(Random.Range(-4, 4), Random.Range(-4, 4));
+        }
+       
     }
 }
